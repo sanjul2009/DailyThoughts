@@ -1,0 +1,21 @@
+<ActionBar title="Daily Thoughts" height="75" color="#000" class="grad">
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem> 
+</ActionBar>
+ <StackLayout class="top-gradient">
+    <ListView [items]="items">
+        <ng-template let-item="item" let-i="index">
+            <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5" (tap)="onCardTap(item)" >
+                <grid-layout rows="200, auto, auto" columns="auto, auto, *">
+                    <Image [src]="item.ImageUrl" stretch="aspectFill" colSpan="3" row="0" /> 
+                    <Label textWrap="true" text="{{item.Quote}}" class="h2 description-label info" textWrap="true" row="1" colSpan="3"></Label>
+                    <Label textWrap="true" text="{{item.Author}}" class="description-label" row="2" col="0"></Label>
+                    <Label class="description-label" text="View" row="2" col="1" ></Label>
+                </grid-layout>
+            </Card:CardView> 
+        </ng-template>
+    </ListView>
+ </StackLayout> 
