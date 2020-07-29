@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "477730436395",
+    "firebase_url": "https://positivethoughts-4acfd.firebaseio.com",
+    "project_id": "positivethoughts-4acfd",
+    "storage_bucket": "positivethoughts-4acfd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477730436395:android:e7851d05aa68b39d41416e",
+        "android_client_info": {
+          "package_name": "org.nativescript.DailyThoughts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477730436395-evnluifn3g0r1517985dno6ughl7dqfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqQc9uutusfj6odq5u0TozDxbI8ROb_F4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477730436395-evnluifn3g0r1517985dno6ughl7dqfg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
