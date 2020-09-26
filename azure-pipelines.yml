@@ -16,6 +16,20 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    npm install -g @angular/cli
+    npm install -g nativescript
     npm install
-    npm run build
-  displayName: 'npm install and build'
+    tns build android
+  displayName: 'npm install and native script setup'
+
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'hope app connection'
+    appSlug: 'sanjul.lalwani/Hope'
+    appFile: '/home/vsts/work/1/s/platforms/android/app/build/outputs/apk/debug/app-debug.apk'
+    buildVersion: '1.0.0'
+    symbolsOption: 'Android'
+    releaseNotesOption: 'input'
+    releaseNotesInput: 'New build'
+    destinationType: 'groups'
+    distributionGroupId: 'beta tester'
