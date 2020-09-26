@@ -1,0 +1,22 @@
+<StackLayout height="1000px">
+    <GridLayout columns="*" rows="50,300,*" >
+        <Label text="Theme Selector" col="0" row="0" class="font-20"></Label>
+    <ListView col="0" row="1" [items]="theme" class="p-20">
+        <ng-template let-item="item" let-i="index" >
+            <StackLayout (tap)="onThemeTap(item.className)" >
+                <GridLayout columns="auto,auto" rows="auto">
+                    <Label col="0" row="0" top="0"  width="30" height="30" class="border-1 {{item.class}}" ></Label>
+                    <Label text="{{item.displayName}}" col="1" row="0" top="0" (tap)="onThemeTap('light')"></Label>
+                </GridLayout>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+
+<StackLayout col="0" row="2">
+    <GridLayout columns="*,*" rows="auto">
+            <Button width="150px" col="0" row="0" class="btn btn-outline" text="Apply" (tap)="apply()"></Button>
+            <Button width="150px" col="1" row="0" class="btn btn-outline" text="Close" (tap)="close()"></Button>
+    </GridLayout>
+</StackLayout>
+</GridLayout> 
+</StackLayout>

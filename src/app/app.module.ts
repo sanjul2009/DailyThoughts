@@ -5,6 +5,10 @@ import { HttpClientModule }    from '@angular/common/http';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import{ NotificationService } from './shared/notification.service';
+import{ GlobalService } from './shared/global.service';
+import {ItemService} from './home/item.service';
+import {DatabaseService} from './shared/database.service';
+
 @NgModule({
     bootstrap: [
         AppComponent
@@ -21,6 +25,11 @@ import{ NotificationService } from './shared/notification.service';
     schemas: [
         NO_ERRORS_SCHEMA
     ],
-    providers:[NotificationService]
+    providers:[
+        NotificationService,
+        GlobalService,
+        ItemService,
+        DatabaseService
+    ],
 })
 export class AppModule { }

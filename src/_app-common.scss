@@ -19,7 +19,9 @@
     font-family: "Font Awesome 5 Free", "fa-regular-400";
     font-weight: 400;
 }
-
+.center{
+    align-items: center;
+}
 // Common page class
 .page__content {
     &-icon,
@@ -35,6 +37,17 @@
         margin-top: 20%;
     }
 }
+.vertical-center{
+  margin-top: 25;
+}
+.ng-valid[required] {
+  border-bottom-color: #42A948; 
+  border-bottom-width: 1;
+}
+.ng-invalid {
+  border-bottom-color: #a94442; 
+  border-bottom-width: 1;
+}
 
 // Drawer navigation custom styles
 .nt-drawer__header-image {
@@ -44,4 +57,130 @@
 
 .nt-drawer__header-image__custom {
     color: const(#b7aaff);
+}
+
+
+.grad-default {
+    //background-image: linear-gradient(to right, #33ccff 0%, #ff99cc 100%) ;
+    background-image: linear-gradient(to right, #ffd89b  0%,#19547b  100%) ;
+    color:#000;
+  }
+  .top-gradient-default{
+    //background-image: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%) ;
+    background-image: linear-gradient(to bottom, #ffd89b 0%,  #19547b 100%) ;
+  }
+
+
+.grad-light {
+    background-image: linear-gradient(to right, #fff 0%, #fff 100%) ;
+    color:#000;
+  }
+  .top-gradient-light{
+    background-image: linear-gradient(to bottom, #fff 0%, #fff 100%) ;
+}
+
+
+.grad-dark {
+    background-image: linear-gradient(to right, #000 0%, #000 100%) ;
+    color:#fff;
+  }
+  .top-gradient-dark{
+    background-image: linear-gradient(to bottom, #000 0%, #000 100%) ;
+}
+
+
+
+.grad-purple {
+    background-image: linear-gradient(to right, #cc2b5e  0%,#753a88  100%) ;
+  }
+  .top-gradient-purple{
+    background-image: linear-gradient(to bottom, #cc2b5e 0%, #753a88 100%) ;
+}
+
+.grad-piglet {
+    background-image: linear-gradient(to right, #ee9ca7  0%,#ffdde1  100%) ;
+  }
+  .top-gradient-piglet{
+    background-image: linear-gradient(to bottom, #ee9ca7 0%,  #ffdde1 100%) ;
+}
+
+.grad-gray {
+    background-image: linear-gradient(to right, #bdc3c7  0%,#2c3e50  100%) ;
+  }
+  .top-gradient-gray{
+    background-image: linear-gradient(to bottom, #bdc3c7 0%,  #2c3e50 100%) ;
+}
+
+.grad-socialive {
+    background-image: linear-gradient(to right, #06beb6  0%,#48b1bf  100%) ;
+  }
+  .top-gradient-socialive{
+    background-image: linear-gradient(to bottom, #06beb6 0%,  #48b1bf 100%) ;
+}
+
+
+.grad-green-beach {
+    background-image: linear-gradient(to right, #02aab0  0%,#00cdac  100%) ;
+  }
+  .top-gradient-green-beach{
+    background-image: linear-gradient(to bottom, #02aab0 0%,  #00cdac 100%) ;
+}
+
+.grad-dusk {
+    background-image: linear-gradient(to right, #ffd89b  0%,#19547b  100%) ;
+  }
+  .top-gradient-dusk{
+    background-image: linear-gradient(to bottom, #ffd89b 0%,  #19547b 100%) ;
+}
+
+
+.font-20 {
+    margin: 5px;
+    margin-left: 15px;
+    font-size:20px;
+  }
+
+  .border-1 {
+    border-width: 1;
+    border-color:black;
+    border-radius: 2;
+}
+
+.highlight {
+  background-color: #eee;
+}
+
+
+
+
+// Author page
+
+.contact100-form-title {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 39px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 44px;
+}
+
+.label-input100 {
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.5;
+  padding-left: 5px;
+}
+
+
+.input100 {
+  display: block;
+  width: 100%;
+  background: transparent;
+  font-family: Poppins-Medium;
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.2;
+  padding: 0 5px;
 }

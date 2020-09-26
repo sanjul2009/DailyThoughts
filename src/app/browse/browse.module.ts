@@ -3,14 +3,17 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 
 import { BrowseRoutingModule } from "./browse-routing.module";
 import { BrowseComponent } from "./browse.component";
-
+import { YoutubePlayerModule } from 'nativescript-youtubeplayer/angular';
+import { DetailsComponent } from './details/details.component';
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        BrowseRoutingModule
+        BrowseRoutingModule,
+        YoutubePlayerModule
     ],
     declarations: [
-        BrowseComponent
+        BrowseComponent,
+        DetailsComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

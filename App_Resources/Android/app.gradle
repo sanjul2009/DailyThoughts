@@ -11,8 +11,14 @@
 
 android {
   defaultConfig {
-    minSdkVersion 17
+    applicationId = "org.nativescript.DailyThoughts"
+    minSdkVersion 19
+    maxSdkVersion 29
     generatedDensities = []
+    ndk {
+      abiFilters.clear()
+      abiFilters "x86_64", "x86", "arm64-v8a", "armeabi-v7a"
+    }
   }
   aaptOptions {
     additionalParameters "--no-version-vectors"

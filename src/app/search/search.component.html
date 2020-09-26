@@ -1,21 +1,49 @@
 <ActionBar>
-    <!-- 
-    Use the NavigationButton as a side-drawer button in Android
-    because ActionItems are shown on the right side of the ActionBar
-    -->
+
     <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
-    <!-- 
-    Use the ActionItem for IOS with position set to left. Using the
-    NavigationButton as a side-drawer button in iOS is not possible,
-    because its function is to always navigate back in the application.
-    -->
+  
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
-    <Label text="Search"></Label>
+    <Label text="Author Section"></Label>
 </ActionBar>
 
-<GridLayout class="page__content">
-    <Label class="page__content-icon fas" text="&#xf002;"></Label>
-    <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
-</GridLayout>
+<StackLayout class="p-20" >
+    <!-- <GridLayout rows="auto, auto, auto, auto, auto, auto, auto"  columns="auto,*" >
+        <Label text="Submit Your Quote" class="h1" row=0 colSpan=2></Label>
+        
+        <Label text="Quote" class="vertical-center" row=1 col=0  verticalAligment="center" ></Label>
+        <TextView required hint="fill this out..." margin=20 [(ngModel)]="textField" id="element" row=1 col=1 #element #elementModel="ngModel"></TextView>
+
+        <Label text="Quote" class="vertical-center" row=2 col=0></Label>
+        <Button row=2 col=1  text="Pick an image" margin=20 class="btn btn-primary" (tap)="onPicImage()" visibility="{{ !isVisible ? 'visible' : 'collapsed' }}"></Button>
+        <Progress row=2 col=1 [value]="currentValue" maxValue="100" color="green" id="progressBar" visibility="{{ isVisible ? 'visible' : 'collapsed' }}"></Progress> 
+
+        <Label text="Quote" class="vertical-center" row=3 col=0></Label>
+        <DropDown  [items]="language" row="3" col="1" margin=20 [(ngModel)]="selectedIndex" itemsTextAlignment="center"></DropDown >
+
+        <Label text="Quote" class="vertical-center" row=4 col=0></Label>
+        <TextField required hint="fill this out..." margin=20 [(ngModel)]="textField1" id="element1" row=4 col=1></TextField>
+
+        <Label text="Quote" class="vertical-center" row=5 col=0></Label>
+        <TextField required hint="fill this out..." margin=20 [(ngModel)]="textField2" id="element2" row=5 col=1></TextField>
+        
+        <Button row=7 colSpan=2  text="Save" class="btn btn-primary"></Button>
+    </GridLayout> -->
+
+    <!-- <GridLayout rows="auto, auto, auto, auto, auto, auto, auto"  columns="*" >
+        <Label text="Submit Your Quote" class="contact100-form-title" row=0 ></Label>
+
+        <Label text="Quote" class="label-input100" row=1 verticalAligment="center" ></Label>
+        <TextView class="input100" required hint="Write your quote here..." margin=20 [(ngModel)]="textField" id="element" row=2  #element #elementModel="ngModel"></TextView>
+
+        <Label text="Quote" class="label-input100" row=3 col=0></Label>
+        <DropDown  [items]="language" row="3" col="1" margin=20 [(ngModel)]="selectedIndex" itemsTextAlignment="center"></DropDown >
+
+    </GridLayout> -->
+
+
+
+
+
+</StackLayout>

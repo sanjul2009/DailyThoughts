@@ -4,8 +4,8 @@ Learn more about the RadSideDrawer UI component and how it can be customized in 
 https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawer/getting-started
 -->
 <RadSideDrawer [drawerTransition]="sideDrawerTransition">
-    <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
-        <StackLayout row="0" class="nt-drawer__header" style="background-color:#33ccff">
+    <GridLayout tkDrawerContent rows="auto, *" class="{{drawerContent}}">
+        <StackLayout row="0" class="{{drawerHeader}}">
             <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;"></Image>
             <Label class="nt-drawer__header-brand" text="Guest User"></Label>
             <!-- <Label class="nt-drawer__header-footnote" text="username@mail.com"></Label> -->
@@ -18,20 +18,20 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
                     <Label col="1" text="Home" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/browse')" (tap)="onNavItemTap('/browse')">
+                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/browse')" (tap)="onNavItemTap('/browse')">
                     <Label col="0" text="&#xf1ea;" class="nt-icon far"></Label>
-                    <Label col="1" text="Browse" class="p-r-10"></Label>
+                    <Label col="1" text="Inspirational Videos" class="p-r-10"></Label>
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/search')" (tap)="onNavItemTap('/search')">
                     <Label col="0" text="&#xf002;" class="nt-icon fas"></Label>
-                    <Label col="1" text="Search" class="p-r-10"></Label>
+                    <Label col="1" text="Author Section" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/featured')" (tap)="onNavItemTap('/featured')">
+                <!-- <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/featured')" (tap)="onNavItemTap('/featured')">
                     <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
                     <Label col="1" text="Featured" class="p-r-10"></Label>
-                </GridLayout>
+                </GridLayout>  -->
     
                 <StackLayout class="hr"></StackLayout>
 
@@ -41,6 +41,7 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
                 </GridLayout>
             </StackLayout>
         </ScrollView>
+
     </GridLayout>
 
     <page-router-outlet tkMainContent></page-router-outlet>

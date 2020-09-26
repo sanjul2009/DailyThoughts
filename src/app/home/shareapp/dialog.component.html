@@ -1,0 +1,14 @@
+<StackLayout height="800px">
+    <GridLayout columns="*" rows="50,200,*" >
+    <Label text="Share & Rate Hope App" col="0" row="0" class="font-20"></Label>
+    
+    <Label text="{{message}}" margin="10" textwrap="true" col="0" row="1" class="font-20"></Label>
+<StackLayout col="0" row="2">
+    <GridLayout columns="*,*,*" rows="auto">
+            <Button width="150px" col="0" row="0" class="btn btn-outline" text="Share" (tap)="share()"></Button>
+            <Button width="150px" col="1" row="0" class="btn btn-outline" text="Rate" (tap)="rate()"></Button>
+            <Button width="150px" col="2" row="0" class="btn btn-outline" text="Close" (tap)="close()"></Button>
+    </GridLayout>
+</StackLayout>
+</GridLayout> 
+</StackLayout>

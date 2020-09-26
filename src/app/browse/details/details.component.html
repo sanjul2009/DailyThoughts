@@ -1,0 +1,13 @@
+<ActionBar height="75" class="{{actionBarThemeClass}}">
+    <NavigationButton ios:visibility="collapsed" icon="res://back" (tap)="goBack()"></NavigationButton>
+    <ActionItem icon="res://back" android:visibility="collapsed" (tap)="goBack()"
+    ios.position="left"> </ActionItem> 
+    <Label text="Positive Thoughts" class="action-label"></Label>
+</ActionBar>  
+<ScrollView >
+<StackLayout class="{{pageBackThemeClass}}">
+       <YoutubePlayer id="player" apiKey="AIzaSyDAC2A1mo4sqjz9H3R4qr9LeMugR9VVEeM" src="{{videoId}}"></YoutubePlayer>  
+<!--        
+    <Image (tap)="downloadImage($event)" src="res://share" stretch="fit" horizontalAlignment="right" margin="10 20 5 10"></Image> -->
+</StackLayout>
+</ScrollView>

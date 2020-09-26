@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class GlobalData {
 
     public storage: any;
-
+    className : string = 'default';
     public constructor() { }
 
 }

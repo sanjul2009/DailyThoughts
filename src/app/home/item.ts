@@ -1,3 +1,5 @@
+import {ImageSource} from '@nativescript/core/image-source';
+
 export class Item {
     id: number;
     name: string;
@@ -5,6 +7,7 @@ export class Item {
     Quote:string;
     author:string;
     imageurl:string;
+    cachedImageSource : ImageSource;
     constructor(){
         this.name = "";
         this.id = 1;

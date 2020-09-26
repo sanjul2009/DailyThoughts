@@ -3,6 +3,7 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 
 import { SettingsRoutingModule } from "./settings-routing.module";
 import { SettingsComponent } from "./settings.component";
+import { ModalComponent } from "./theme/modal.component";
 
 @NgModule({
     imports: [
@@ -10,10 +11,12 @@ import { SettingsComponent } from "./settings.component";
         SettingsRoutingModule
     ],
     declarations: [
-        SettingsComponent
+        SettingsComponent,
+        ModalComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
-    ]
+    ],
+    entryComponents: [ModalComponent],
 })
 export class SettingsModule { }

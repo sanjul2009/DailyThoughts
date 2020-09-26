@@ -1,15 +1,22 @@
-<ActionBar height="75" color="#000" class="grad">
+<ActionBar height="75" class="{{actionBarThemeClass}}">
     <NavigationButton ios:visibility="collapsed" icon="res://back" (tap)="goBack()"></NavigationButton>
     <ActionItem icon="res://back" android:visibility="collapsed" (tap)="goBack()"
     ios.position="left"> </ActionItem> 
-    <Label text="Daily Thoughts" class="action-label"></Label>
+    <Label text="Positive Thoughts" class="action-label"></Label>
 </ActionBar>  
-<StackLayout class="top-gradient">
-     <Card:CardView class="cardStyle" margin="10" elevation="40" radius="10">
-        <grid-layout rows="200, auto, auto" columns="auto, auto, *" Height="900">
-            <Image [src]="itemDetails.ImageUrl" stretch="aspectFill" colSpan="3" row="0" /> 
-            <Label textWrap="true" text="{{itemDetails.Quote}}" class="h2 description-label info" textWrap="true" row="1" colSpan="3"></Label>
-            <Label textWrap="true" text="{{itemDetails.Author}}" class="description-label" row="2" col="0"></Label>
+<ScrollView >
+<StackLayout class="{{pageBackThemeClass}}">
+     <Card:CardView id="thoughtCard" class="cardStyle" margin="10" elevation="40" radius="10" #screen>
+        <grid-layout rows="auto, auto, auto" columns="*,auto" Height="900" HorizontalAlignment="right">
+            <Gif:Gif *ngIf="image.isLoaded" src="~/app/home/loading.gif"  row="0" colSpan="2" height="200" />
+            <Image #image [src]="itemDetails.imageurl" stretch="aspectFit"  row="0" colSpan="2"></Image> 
+
+            <Label textWrap="true" text="{{itemDetails.Quote}}" class="description-label info quote-font" textWrap="true" row="1" colSpan="2"></Label>
+            <Image id="logo" #logo src="res://icon" stretch="fit" row="2" col="0" visibility="visible"></Image>  
+            <Label text="{{itemDetails.author}}" class="description-label author-font" row="2" col="1"></Label>
+                       
         </grid-layout>
-    </Card:CardView> 
+    </Card:CardView>
+    <Image (tap)="downloadImage($event)" src="res://share" stretch="fit" horizontalAlignment="right" margin="10 20 5 10"></Image>
 </StackLayout>
+</ScrollView>
