@@ -27,8 +27,8 @@ import { ModalDialogService, ModalDialogOptions } from "@nativescript/angular/mo
 
 @Component({
     selector: "Home",
-    templateUrl: "./home.component.html",
-    styleUrls: ["./home.component.css"]
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit,AfterViewInit {
     items: Array<Item> = new Array<Item>();
