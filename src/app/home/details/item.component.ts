@@ -65,7 +65,7 @@ export class ItemDetailsComponent implements OnInit,AfterViewInit {
                 let parent = button.parent;
                 let card = getViewById(parent, "thoughtCard"); 
                 var imagefromplugin = plugin.getImage(card);
-                SocialShare.shareImage(imagefromplugin,"Hi There! I found this inspiring thought on Hope App!!!: https://tinyurl.com/y3pndvnq");
+                SocialShare.shareImage("Hi There! I found this inspiring thought on Hope App!!!: https://tinyurl.com/y3pndvnq",imagefromplugin);
         })
         .catch( () => {
             var toast = Toast.makeText("Permission denied. Cannot share image");

@@ -14,7 +14,7 @@ import {NotificationService} from '../shared/notification.service';
 import { GlobalService } from '../shared/global.service';
 import { Gif } from 'nativescript-gif';
 import plugin from 'nativescript-screenshot';
-import * as SocialShare from "nativescript-social-share";
+import * as SocialShare from "../plugin/nativescript-social-share";
 import { ShareAppComponent } from "./shareapp/dialog.component";
 import { LanguageDialogueComponent } from "./language/dialog.component";
 registerElement('Gif', () => Gif);
