@@ -1,0 +1,44 @@
+
+.description-label{
+    margin: 15;
+    color: #000;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+    
+.grad {
+    background-image: linear-gradient(to right, #33ccff 0%, #ff99cc 100%) ;
+  }
+  .top-left {
+    position: absolute;
+    top: 50px;
+    left: 16px;
+    font-size:35px;
+    word-wrap: break-word;
+    width:75%;
+  }
+
+  .cardStyle {
+    color: #fff;    
+  }
+
+  .top-gradient{
+    background-image: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+  }
+
+  .far {
+    font-family: "Font Awesome 5 Free", "fa-regular-400";
+    font-weight: 400;
+}
+
+
+.left{
+  text-align:left;
+  float: left;
+  position: fixed;
+  left: 0;
+}

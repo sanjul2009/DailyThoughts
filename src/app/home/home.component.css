@@ -1,0 +1,50 @@
+
+.description-label{
+    color: #000;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+          
+  .top-left {
+    position: absolute;
+    top: 50px;
+    left: 16px;
+    font-size:35px;
+    word-wrap: break-word;
+    width:75%;
+  }
+
+  .cardStyle {
+    background-color: #fff;
+    color: #fff;
+  }
+
+  .far {
+    font-family: "Font Awesome 5 Free", "fa-regular-400";
+    font-weight: 400;
+}
+
+.action-label{
+  font-size: 20px;
+}
+
+.action-image{
+  float: right;
+}
+
+.quote-font{
+  font: italic 20em "Vollkorn", serif; 
+  
+  margin: 0 15 0 15;
+  word-wrap: break-word;
+}
+
+.author-font{
+  font: 18em "Vollkorn", serif; 
+  font-weight: bold;
+  margin: 0 15 15 15;
+}
