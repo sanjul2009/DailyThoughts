@@ -21,7 +21,7 @@ registerElement('CardView', () => CardView);
 @Component({
     selector: "ns-itemdetails",
     templateUrl: './item.component.html',
-    styleUrls: ['./home/home.component.css']
+    styleUrls: ['../home.component.css']
 })
 export class ItemDetailsComponent implements OnInit,AfterViewInit {
     itemDetails : Item;
