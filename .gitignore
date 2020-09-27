@@ -8,7 +8,7 @@ platforms/
 *.js
 !webpack.config.js
 *.css
-
+!/src/app/plugin/nativescript-social-share/social-share.android.js
 # Logs
 logs
 *.log
