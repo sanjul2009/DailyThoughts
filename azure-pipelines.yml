@@ -19,7 +19,7 @@ steps:
     npm install -g @angular/cli
     npm install -g nativescript
     npm install
-    tns build android
+    tns build android --bundle --env.uglify --env.aot --release --key-store-path "/home/vsts/work/1/s/release.keystore" --key-store-password sanjuldgr8 --key-store-alias thoughtskeystore --key-store-alias-password sanjuldgr8 --aab
   displayName: 'npm install and native script setup'
 
 - task: AppCenterDistribute@3
