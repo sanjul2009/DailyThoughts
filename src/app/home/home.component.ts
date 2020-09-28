@@ -98,8 +98,9 @@ export class HomeComponent implements OnInit,AfterViewInit {
                 }); 
                 
         this.databaseService.getClassTheme();
-        setTimeout(() => {     
-            this.shareAppPopUp();
+        setTimeout(() => {   
+            if(this.databaseService.getShareAppFlag())  
+                this.shareAppPopUp();
             }, 5000);
      }
 
@@ -150,6 +151,7 @@ export class HomeComponent implements OnInit,AfterViewInit {
     }
 
     shareAppPopUp(){
+        this.databaseService.setShareAppFlag(false);
         const options: ModalDialogOptions = {
             viewContainerRef: this.viewContainerRef,
             fullscreen: false,

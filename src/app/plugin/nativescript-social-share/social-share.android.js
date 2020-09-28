@@ -20,7 +20,7 @@ function share(intent, subject) {
 function useAndroidX() {
     return global.androidx && global.androidx.appcompat;
 }
-function shareImage(image, subject) {
+function shareImage(text, image, subject) {
     numberOfImagesCreated++;
     context = application.android.context;
     var intent = getIntent("image/jpeg");
@@ -41,6 +41,7 @@ function shareImage(image, subject) {
         shareableFileUri = android.net.Uri.fromFile(newFile);
     }
     intent.putExtra(android.content.Intent.EXTRA_STREAM, shareableFileUri);
+    intent.putExtra(android.content.Intent.EXTRA_TEXT, text);
     share(intent, subject);
 }
 exports.shareImage = shareImage;

@@ -14,6 +14,7 @@ export class DatabaseService {
     database: any;
     uniqueId : string;
     token:string;
+    showShareApp:boolean = true;
     constructor(private http: HttpClient,
         private notificationService:NotificationService,
         private _globalService : GlobalService) { 
@@ -115,5 +116,12 @@ export class DatabaseService {
     }
     getToken(){
        return this.token;
+    }
+
+    setShareAppFlag(value:boolean){
+        this.showShareApp = value;
+    }
+    getShareAppFlag(){
+       return this.showShareApp;
     }
 }

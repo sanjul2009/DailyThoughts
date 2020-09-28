@@ -1,35 +1,37 @@
-<ActionBar>
-
+<ActionBar title="Author Section" height="75" class="{{actionBarThemeClass}}">
     <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
-  
+
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="left">
-    </ActionItem>
-    <Label text="Author Section"></Label>
+    </ActionItem> 
 </ActionBar>
 
-<StackLayout class="p-20" >
-    <!-- <GridLayout rows="auto, auto, auto, auto, auto, auto, auto"  columns="auto,*" >
+<StackLayout class="p-20 {{pageBackThemeClass}}" >
+    <label text="Hi, Please do not Submit any quotes as service is not available. We will get the service soon. Thanks." ></label>
+    <GridLayout rows="auto, auto, auto, auto, auto, auto, auto"  columns="auto,*" >
         <Label text="Submit Your Quote" class="h1" row=0 colSpan=2></Label>
         
         <Label text="Quote" class="vertical-center" row=1 col=0  verticalAligment="center" ></Label>
-        <TextView required hint="fill this out..." margin=20 [(ngModel)]="textField" id="element" row=1 col=1 #element #elementModel="ngModel"></TextView>
+        <TextView required hint="Write your quote here." margin=20 [(ngModel)]="textField" id="element" row=1 col=1 #element #elementModel="ngModel"></TextView>
 
-        <Label text="Quote" class="vertical-center" row=2 col=0></Label>
+        <Label text="Image" class="vertical-center" row=2 col=0></Label>
         <Button row=2 col=1  text="Pick an image" margin=20 class="btn btn-primary" (tap)="onPicImage()" visibility="{{ !isVisible ? 'visible' : 'collapsed' }}"></Button>
         <Progress row=2 col=1 [value]="currentValue" maxValue="100" color="green" id="progressBar" visibility="{{ isVisible ? 'visible' : 'collapsed' }}"></Progress> 
 
-        <Label text="Quote" class="vertical-center" row=3 col=0></Label>
+        <Label text="Language" class="vertical-center" row=3 col=0></Label>
         <DropDown  [items]="language" row="3" col="1" margin=20 [(ngModel)]="selectedIndex" itemsTextAlignment="center"></DropDown >
 
-        <Label text="Quote" class="vertical-center" row=4 col=0></Label>
-        <TextField required hint="fill this out..." margin=20 [(ngModel)]="textField1" id="element1" row=4 col=1></TextField>
+        <Label text="Autor" class="vertical-center" row=4 col=0></Label>
+        <TextField required hint="Please write Quote-Author's name" margin=20 [(ngModel)]="textField1" id="element1" row=4 col=1></TextField>
 
-        <Label text="Quote" class="vertical-center" row=5 col=0></Label>
-        <TextField required hint="fill this out..." margin=20 [(ngModel)]="textField2" id="element2" row=5 col=1></TextField>
+        <Label text="Submitted By" class="vertical-center" row=5 col=0></Label>
+        <TextField required hint="Please provide your name." margin=20 [(ngModel)]="textField2" id="element2" row=5 col=1></TextField>
         
-        <Button row=7 colSpan=2  text="Save" class="btn btn-primary"></Button>
-    </GridLayout> -->
+        <Label text="Email Id" class="vertical-center" row=5 col=0></Label>
+        <TextField required hint="Please provide your email address." margin=20 [(ngModel)]="textField3" id="element3" row=5 col=1></TextField>
+        
+        <Button row=7 colSpan=2  text="Save" class="btn btn-primary" (click)="onSubmit()"></Button>
+    </GridLayout> 
 
     <!-- <GridLayout rows="auto, auto, auto, auto, auto, auto, auto"  columns="*" >
         <Label text="Submit Your Quote" class="contact100-form-title" row=0 ></Label>

@@ -6,20 +6,33 @@ import * as imagepicker from "nativescript-imagepicker";
 var bghttp = require("nativescript-background-http");
 import { Progress } from "tns-core-modules/ui/progress";
 import { Observable, Subject } from 'rxjs';
-
+import {NotificationService} from '../shared/notification.service';
+import {DatabaseService} from '../shared/database.service';
 @Component({
     selector: "Search",
     templateUrl: "./search.component.html"
 })
 export class SearchComponent implements OnInit {
     textField:string;
+    textField1:string;
+    textField2:string;
+    textField3:string;
     public selectedIndex = 0;
     language:Array<string> = ['--Select language--','English','Hindi'];
     currentValue:number = 0;
     isVisible:boolean = false;
     private updateProgress = new Subject<any>();
     subscription:any;
-    constructor() {
+        
+    actionBarThemeClass :string;
+    actionBarThemeClassPrefix :string = 'grad-';
+    pageBackThemeClass :string;
+    selectedTheme:string = 'default'; 
+    
+    pageBackThemeClassPrefix :string = 'top-gradient-';
+
+    constructor(private notificationService : NotificationService,
+        private databaseService : DatabaseService,) {
         // Use the component constructor to inject providers.
         this.subscription = [];
     }
@@ -27,8 +40,12 @@ export class SearchComponent implements OnInit {
     ngOnInit(): void {
         // Init your component properties here.
         this.subscription.push(
-            
+            this.notificationService.notifyApplyTheme().subscribe(className => 
+                { 
+                    this.applyTheme(className);
+                })
         );
+        this.databaseService.getClassTheme();
     }
 
     onDrawerButtonTap(): void {
@@ -117,4 +134,13 @@ export class SearchComponent implements OnInit {
     //     return this.updateProgress.asObservable();
     // }
 
+    applyTheme(className:any){
+        this.actionBarThemeClass = this.actionBarThemeClassPrefix + className; 
+        this.pageBackThemeClass = this.pageBackThemeClassPrefix + className;
+        this.selectedTheme = className;
+    }
+
+    onSubmit(){
+        alert("Thanks for the Quote[Message]. We are working on Service. Please give us some time. Thanks. :)");
+    }
 }
